@@ -32,9 +32,11 @@ Software Engineer | Open Source
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=hackertron&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=hackertron&theme=tokyonight&no-frame=true&no-bg=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
-
 </div>
+
+<!-- STATS:START -->
+<!-- This section is auto-updated by the stats workflow -->
+<!-- STATS:END -->
 
 ---
 

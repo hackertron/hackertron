@@ -1,0 +1,95 @@
+name: Update Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch stats and update README
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const username = 'hackertron';
+
+            const { data } = await github.graphql(`
+              query($login: String!) {
+                user(login: $login) {
+                  repositories(ownerAffiliations: OWNER, first: 100, orderBy: {field: STARGAZERS, direction: DESC}) {
+                    totalCount
+                    nodes { stargazerCount }
+                  }
+                  pullRequests { totalCount }
+                  issues { totalCount }
+                  repositoriesContributedTo { totalCount }
+                  contributionsCollection {
+                    totalCommitContributions
+                    restrictedContributionsCount
+                  }
+                }
+              }
+            `, { login: username });
+
+            const user = data.user;
+            const totalStars = user.repositories.nodes.reduce((sum, r) => sum + r.stargazerCount, 0);
+            const totalCommits = user.contributionsCollection.totalCommitContributions + user.contributionsCollection.restrictedContributionsCount;
+
+            const now = new Date();
+            const yearStart = `${now.getFullYear()}-01-01T00:00:00Z`;
+            const yearEnd = `${now.getFullYear()}-12-31T23:59:59Z`;
+
+            const { data: yearData } = await github.graphql(`
+              query($login: String!, $from: DateTime!, $to: DateTime!) {
+                user(login: $login) {
+                  contributionsCollection(from: $from, to: $to) {
+                    totalCommitContributions
+                    restrictedContributionsCount
+                    totalPullRequestContributions
+                    totalIssueContributions
+                  }
+                }
+              }
+            `, { login: username, from: yearStart, to: yearEnd });
+
+            const y = yearData.user.contributionsCollection;
+            const yearCommits = y.totalCommitContributions + y.restrictedContributionsCount;
+
+            const table = [
+              '| All Time | This Year |',
+              '|---|---|',
+              `| **${user.repositories.totalCount}** repos | **${yearCommits}** commits |`,
+              `| **${totalCommits}** commits | **${y.totalIssueContributions}** issues |`,
+              `| **${user.issues.totalCount}** issues | **${y.totalPullRequestContributions}** PRs |`,
+              `| **${user.pullRequests.totalCount}** PRs | |`,
+              `| **${totalStars}** stars | |`,
+              `| **${user.repositoriesContributedTo.totalCount}** contributed to | |`,
+            ].join('\n');
+
+            const fs = require('fs');
+            let readme = fs.readFileSync('README.md', 'utf8');
+            const startMarker = '<!-- STATS:START -->';
+            const endMarker = '<!-- STATS:END -->';
+            const startIdx = readme.indexOf(startMarker);
+            const endIdx = readme.indexOf(endMarker);
+
+            if (startIdx !== -1 && endIdx !== -1) {
+              readme = readme.substring(0, startIdx + startMarker.length) + '\n' + table + '\n' + readme.substring(endIdx);
+              fs.writeFileSync('README.md', readme);
+            } else {
+              core.setFailed('Could not find STATS markers in README.md');
+            }
+
+      - name: Commit and push
+        run: |
+          git config user.name "hackertron"
+          git config user.email "cooljay.gupta@gmail.com"
+          git add README.md
+          git diff --staged --quiet || (git commit -m "chore: update stats [bot]" && git push)
