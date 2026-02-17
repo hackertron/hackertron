@@ -10,8 +10,8 @@ Software Engineer | Open Source
 
 ---
 
-- Building with **ZK proofs**, **TLSNotary**, and **LLMs**
-- Background in **security research**, **CTFs**, and **game dev**
+- Building with **AI agents**, **ZK proofs**, and **apps**
+- Background in **full stack dev**, **CTFs**, and **game dev**
 - Open source contributor
 
 ---
