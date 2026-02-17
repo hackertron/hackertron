@@ -1,26 +1,22 @@
 <div align="center">
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:003300,100:00ff41&height=220&section=header&text=hackertron&fontSize=60&fontColor=00ff41&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%7C%20Open%20Source&descSize=18&descAlignY=55&descColor=c9d1d9)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=28&pause=1000&color=A9B1D6&center=true&vCenter=true&random=false&width=500&lines=hackertron)](https://git.io/typing-svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FF41&center=true&vCenter=true&random=false&width=600&lines=Ex-CERN+%7C+Ethereum+%7C+WikiToLearn;Security+%7C+Blockchain+%7C+Game+Dev;Open+Source+Contributor;Building+things+that+matter)](https://git.io/typing-svg)
+Software Engineer | Open Source
 
-![Profile Views](https://komarev.com/ghpvc/?username=hackertron&color=00ff41&style=flat-square&label=VISITORS)
+![Profile Views](https://komarev.com/ghpvc/?username=hackertron&color=7aa2f7&style=flat-square&label=visitors)
 
 </div>
 
-## `> whoami`
+---
 
-```
-Software Engineer who has shipped code at CERN, Ethereum Foundation,
-WikiToLearn, and Appbase.io. I build across security, blockchain,
-game dev, and open source.
-```
-
-- Currently building with **ZK proofs**, **TLSNotary**, and **LLMs**
+- Building with **ZK proofs**, **TLSNotary**, and **LLMs**
 - Background in **security research**, **CTFs**, and **game dev**
-- Open source contributor and advocate
+- Open source contributor
 
-## `> tech_stack`
+---
+
+### tech stack
 
 <div align="center">
 
@@ -28,60 +24,56 @@ game dev, and open source.
 
 </div>
 
-## `> github_stats`
+---
+
+### stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=hackertron&show_icons=true&hide_border=true&count_private=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hackertron&layout=compact&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=8" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api?username=hackertron&show_icons=true&theme=tokyonight&hide_border=true" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hackertron&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" />
 </div>
 
 <div align="center">
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=hackertron&hide_border=true&background=0d1117&ring=00ff41&fire=00ff41&currStreakNum=00ff41&sideNums=c9d1d9&currStreakLabel=00ff41&sideLabels=00ff41&dates=555555)](https://git.io/streak-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=hackertron&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
 </div>
 
-## `> featured_projects`
+---
+
+### projects
 
 <!-- ============================================================ -->
-<!-- HOW TO ADD A PROJECT: Copy the block below, change repo=NAME -->
-<!--                                                              -->
-<!--   <a href="https://github.com/hackertron/REPO_NAME">        -->
-<!--     <img src="https://github-readme-stats.vercel.app/api/    -->
-<!--     pin/?username=hackertron&repo=REPO_NAME&hide_border=true -->
-<!--     &bg_color=0d1117&title_color=00ff41&text_color=c9d1d9   -->
-<!--     &icon_color=00ff41" width="48%" />                       -->
-<!--   </a>                                                       -->
+<!-- HOW TO ADD A PROJECT: Copy any <a>...</a> block below and    -->
+<!-- change repo=REPO_NAME in both the href and img src           -->
 <!-- ============================================================ -->
 
 <div align="center">
 
 <a href="https://github.com/hackertron/CheatToWin">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=CheatToWin&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=CheatToWin&theme=tokyonight&hide_border=true" width="48%" />
 </a>
 <a href="https://github.com/hackertron/WikiDesktopClient">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=WikiDesktopClient&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=WikiDesktopClient&theme=tokyonight&hide_border=true" width="48%" />
 </a>
 <a href="https://github.com/hackertron/CryptSteg">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=CryptSteg&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=CryptSteg&theme=tokyonight&hide_border=true" width="48%" />
 </a>
 <a href="https://github.com/hackertron/LucidLoanMachine">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=LucidLoanMachine&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=LucidLoanMachine&theme=tokyonight&hide_border=true" width="48%" />
 </a>
 <a href="https://github.com/hackertron/BlockSight">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=BlockSight&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=BlockSight&theme=tokyonight&hide_border=true" width="48%" />
 </a>
 <a href="https://github.com/hackertron/zkTrust">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=zkTrust&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&icon_color=00ff41" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=zkTrust&theme=tokyonight&hide_border=true" width="48%" />
 </a>
 
 </div>
 
-## `> activity`
+---
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=hackertron&bg_color=0d1117&color=00ff41&line=00ff41&point=ffffff&area=true&area_color=00ff4133&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-## `> snake`
+### snake
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hackertron/hackertron/output/github-snake-dark.svg" />
@@ -89,19 +81,11 @@ game dev, and open source.
   <img alt="github-snake" src="https://raw.githubusercontent.com/hackertron/hackertron/output/github-snake-dark.svg" />
 </picture>
 
-## `> connect`
-
-<div align="center">
-
-[![Blog](https://img.shields.io/badge/Blog-00ff41?style=for-the-badge&logo=google-chrome&logoColor=0d1117)](https://hackertron.github.io/)
-[![GitHub](https://img.shields.io/badge/GitHub-00ff41?style=for-the-badge&logo=github&logoColor=0d1117)](https://github.com/hackertron)
-
-</div>
-
 ---
 
 <div align="center">
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:003300,100:00ff41&height=120&section=footer)
+[![Blog](https://img.shields.io/badge/Blog-1a1b27?style=for-the-badge&logo=google-chrome&logoColor=7aa2f7)](https://hackertron.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-1a1b27?style=for-the-badge&logo=github&logoColor=7aa2f7)](https://github.com/hackertron)
 
 </div>
