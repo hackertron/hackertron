@@ -20,7 +20,7 @@ jobs:
           script: |
             const username = 'hackertron';
 
-            const { data } = await github.graphql(`
+            const result = await github.graphql(`
               query($login: String!) {
                 user(login: $login) {
                   repositories(ownerAffiliations: OWNER, first: 100, orderBy: {field: STARGAZERS, direction: DESC}) {
@@ -38,7 +38,7 @@ jobs:
               }
             `, { login: username });
 
-            const user = data.user;
+            const user = result.user;
             const totalStars = user.repositories.nodes.reduce((sum, r) => sum + r.stargazerCount, 0);
             const totalCommits = user.contributionsCollection.totalCommitContributions + user.contributionsCollection.restrictedContributionsCount;
 
@@ -46,7 +46,7 @@ jobs:
             const yearStart = `${now.getFullYear()}-01-01T00:00:00Z`;
             const yearEnd = `${now.getFullYear()}-12-31T23:59:59Z`;
 
-            const { data: yearData } = await github.graphql(`
+            const yearResult = await github.graphql(`
               query($login: String!, $from: DateTime!, $to: DateTime!) {
                 user(login: $login) {
                   contributionsCollection(from: $from, to: $to) {
@@ -59,7 +59,7 @@ jobs:
               }
             `, { login: username, from: yearStart, to: yearEnd });
 
-            const y = yearData.user.contributionsCollection;
+            const y = yearResult.user.contributionsCollection;
             const yearCommits = y.totalCommitContributions + y.restrictedContributionsCount;
 
             const table = [
