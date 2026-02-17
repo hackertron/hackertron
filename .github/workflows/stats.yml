@@ -4,8 +4,6 @@ on:
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
   update-stats:
@@ -20,12 +18,13 @@ jobs:
           script: |
             const username = 'hackertron';
 
+            // Fetch core stats via GraphQL
             const result = await github.graphql(`
               query($login: String!) {
                 user(login: $login) {
                   repositories(ownerAffiliations: OWNER, first: 100, orderBy: {field: STARGAZERS, direction: DESC}) {
                     totalCount
-                    nodes { stargazerCount }
+                    nodes { name, stargazerCount }
                   }
                   pullRequests { totalCount }
                   issues { totalCount }
@@ -42,6 +41,7 @@ jobs:
             const totalStars = user.repositories.nodes.reduce((sum, r) => sum + r.stargazerCount, 0);
             const totalCommits = user.contributionsCollection.totalCommitContributions + user.contributionsCollection.restrictedContributionsCount;
 
+            // Fetch this year stats
             const now = new Date();
             const yearStart = `${now.getFullYear()}-01-01T00:00:00Z`;
             const yearEnd = `${now.getFullYear()}-12-31T23:59:59Z`;
@@ -62,14 +62,48 @@ jobs:
             const y = yearResult.user.contributionsCollection;
             const yearCommits = y.totalCommitContributions + y.restrictedContributionsCount;
 
+            // Fetch lines added/removed from contributor stats per repo
+            let totalAdded = 0;
+            let totalRemoved = 0;
+            const repoNames = user.repositories.nodes.map(r => r.name);
+
+            for (const repo of repoNames) {
+              for (let attempt = 0; attempt < 3; attempt++) {
+                try {
+                  const { data, status } = await github.rest.repos.getContributorsStats({
+                    owner: username,
+                    repo: repo,
+                  });
+                  if (status === 202) {
+                    await new Promise(r => setTimeout(r, 2000));
+                    continue;
+                  }
+                  if (Array.isArray(data)) {
+                    const me = data.find(c => c.author && c.author.login.toLowerCase() === username.toLowerCase());
+                    if (me && me.weeks) {
+                      for (const week of me.weeks) {
+                        totalAdded += week.a;
+                        totalRemoved += week.d;
+                      }
+                    }
+                  }
+                  break;
+                } catch (e) {
+                  break;
+                }
+              }
+            }
+
+            const fmtNum = (n) => n.toLocaleString('en-US');
+
             const table = [
               '| All Time | This Year |',
               '|---|---|',
-              `| **${user.repositories.totalCount}** repos | **${yearCommits}** commits |`,
-              `| **${totalCommits}** commits | **${y.totalIssueContributions}** issues |`,
+              `| **${user.repositories.totalCount}** repos | **${fmtNum(yearCommits)}** commits |`,
+              `| **${fmtNum(totalCommits)}** commits | **${y.totalIssueContributions}** issues |`,
               `| **${user.issues.totalCount}** issues | **${y.totalPullRequestContributions}** PRs |`,
-              `| **${user.pullRequests.totalCount}** PRs | |`,
-              `| **${totalStars}** stars | |`,
+              `| **${user.pullRequests.totalCount}** PRs | **+${fmtNum(totalAdded)}** lines added |`,
+              `| **${totalStars}** stars | **-${fmtNum(totalRemoved)}** lines removed |`,
               `| **${user.repositoriesContributedTo.totalCount}** contributed to | |`,
             ].join('\n');
 
