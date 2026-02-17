@@ -29,13 +29,10 @@ Software Engineer | Open Source
 ### stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=hackertron&show_icons=true&theme=tokyonight&hide_border=true" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hackertron&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" />
-</div>
-
-<div align="center">
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=hackertron&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=hackertron&theme=tokyonight&no-frame=true&no-bg=true&column=7)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
@@ -43,33 +40,18 @@ Software Engineer | Open Source
 
 ### projects
 
-<!-- ============================================================ -->
-<!-- HOW TO ADD A PROJECT: Copy any <a>...</a> block below and    -->
-<!-- change repo=REPO_NAME in both the href and img src           -->
-<!-- ============================================================ -->
+<!-- To add a project: copy a row and update name, description, tech, and link -->
 
-<div align="center">
-
-<a href="https://github.com/hackertron/CheatToWin">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=CheatToWin&theme=tokyonight&hide_border=true" width="48%" />
-</a>
-<a href="https://github.com/hackertron/WikiDesktopClient">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=WikiDesktopClient&theme=tokyonight&hide_border=true" width="48%" />
-</a>
-<a href="https://github.com/hackertron/CryptSteg">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=CryptSteg&theme=tokyonight&hide_border=true" width="48%" />
-</a>
-<a href="https://github.com/hackertron/LucidLoanMachine">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=LucidLoanMachine&theme=tokyonight&hide_border=true" width="48%" />
-</a>
-<a href="https://github.com/hackertron/BlockSight">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=BlockSight&theme=tokyonight&hide_border=true" width="48%" />
-</a>
-<a href="https://github.com/hackertron/zkTrust">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=hackertron&repo=zkTrust&theme=tokyonight&hide_border=true" width="48%" />
-</a>
-
-</div>
+| Project | Description | Tech |
+|---------|-------------|------|
+| [**CheatToWin**](https://github.com/hackertron/CheatToWin) | A game only for hackers | C++, UE4 |
+| [**WikiDesktopClient**](https://github.com/hackertron/WikiDesktopClient) | WikiToLearn desktop client with offline reading | C++, Qt |
+| [**CryptSteg**](https://github.com/hackertron/CryptSteg) | CTF focused on Cryptography & Steganography | Web |
+| [**LucidLoanMachine**](https://github.com/hackertron/LucidLoanMachine) | LLM and ZK powered loan app | Python, ZK |
+| [**BlockSight**](https://github.com/hackertron/BlockSight) | Ethereum block insight & analytics | Go |
+| [**zkTrust**](https://github.com/hackertron/zkTrust) | Decentralized review service with ZK verification | TypeScript |
+| [**TLSN-plugin-gen**](https://github.com/hackertron/TLSN-plugin-gen) | Generate TLSNotary plugins using agents | Python |
+| [**RustyRedirect**](https://github.com/hackertron/RustyRedirect) | URL shortener in Rust | Rust |
 
 ---
 
