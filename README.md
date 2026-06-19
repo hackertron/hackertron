@@ -37,11 +37,11 @@ Software Engineer | Open Source
 <!-- STATS:START -->
 | All Time | This Year |
 |---|---|
-| **114** repos | **2,077** commits |
-| **2,733** commits | **8** issues |
+| **114** repos | **2,102** commits |
+| **2,758** commits | **8** issues |
 | **179** issues | **15** PRs |
-| **207** PRs | **+1,138,452** lines added |
-| **80** stars | **-20,966** lines removed |
+| **207** PRs | **+1,138,456** lines added |
+| **80** stars | **-20,970** lines removed |
 | **13** contributed to | |
 <!-- STATS:END -->
 
